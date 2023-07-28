@@ -37,6 +37,11 @@ h1 {
   margin: 0.67em 0;
 }
 
+
+
+header{
+  background-image: linear-gradient(to right, rgba(4, 55, 208, 0.986), rgba(255, 179, 0, 0.322));
+}
 /* Grouping content
    ========================================================================== */
 /**
@@ -370,9 +375,22 @@ h6 {
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
-
+#survey{
+  font-family: 'Noto Serif JP', serif;
+}
+#manSer{
+  font-family:'Cedarville Cursive', cursive;
+}
+ #headHov:hover{
+    
+    color: #0ebcf1;
+    text-decoration: underline;
+  
+}
 h1 {
-  font-size: 2.25rem;
+  
+  
+  font-size: 3rem;
 }
 
 h2 {
@@ -420,14 +438,11 @@ button {
 }
 
 a {
-  color: #1b89bc;
+  color: #e4980c;
   text-decoration: none;
 }
 
-a:hover {
-  color: #065b83;
-  text-decoration: underline;
-}
+
 
 /* HEIGHT / WIDTH UTILS */
 .w-100 {
