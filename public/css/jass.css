@@ -40,7 +40,11 @@ h1 {
 
 
 header{
-  background-image: linear-gradient(to right, rgba(4, 55, 208, 0.986), rgba(255, 179, 0, 0.322));
+  background-color: #3280ce;
+  box-shadow: 10px grey;
+}
+.bodyBack{
+  background-color: #f2f4f8;
 }
 /* Grouping content
    ========================================================================== */
@@ -359,6 +363,11 @@ body {
 }
 
 body {
+  background-image: url('../images/pexels-ann-h-11183364.jpg');
+  height: 500px;
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: cover;
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -376,15 +385,21 @@ h6 {
   line-height: 1.25;
 }
 #survey{
+  color: #e4980c;
   font-family: 'Noto Serif JP', serif;
 }
 #manSer{
-  font-family:'Cedarville Cursive', cursive;
+  color: #d7d3cd;
+  font-size: 2.0rem;
+  font-family: 'Edu SA Beginner', cursive;
+}
+#loginBut{
+  color:rgba(4, 208, 38, 0.986);
 }
  #headHov:hover{
     
     color: #0ebcf1;
-    text-decoration: underline;
+    
   
 }
 h1 {
@@ -437,10 +452,6 @@ button {
   margin: 0;
 }
 
-a {
-  color: #e4980c;
-  text-decoration: none;
-}
 
 
 
@@ -1000,7 +1011,7 @@ a {
 }
 
 .btn:hover {
-  background-color: #cecece;
+  background-color: #e71010;
 }
 
 .btn.btn-squared {
@@ -1024,12 +1035,12 @@ a {
 }
 
 .btn.btn-primary {
-  background-color: #2d3e50;
-  color: #d9e9e8;
+  background-color: #e4980c;
+  color: #244d4a;
 }
 
 .btn.btn-primary:hover {
-  background-color: #57779a;
+  background-color: #ffa704;
 }
 
 .btn.btn-danger {
@@ -1128,6 +1139,7 @@ form {
 }
 
 form .form-group {
+  color: white;
   display: block;
   width: 100%;
   margin: 0.625rem 0;
@@ -1264,6 +1276,8 @@ form [type='radio'] {
 }
 
 .row {
+  background-color: #0a6fd58f;
+  border-radius: 4%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
