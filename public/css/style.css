@@ -13,7 +13,7 @@ header, .project:not(:last-child) {
 }
 
 .no-button:hover {
-  color: #065b83;
+  color: #210683;
   text-decoration: underline;
 }
 
