@@ -11,9 +11,7 @@ header, .project:not(:last-child) {
   text-decoration: none;
   font-size: 100%;
 }
-.btn btn-primary:hover{
 
-}
 .no-button:hover {
   color: #210683;
   text-decoration: underline;

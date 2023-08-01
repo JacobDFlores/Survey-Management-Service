@@ -7,9 +7,8 @@
   <title>Fund My Project!</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&family=Kanit:ital,wght@1,300&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap" rel="stylesheet">
@@ -24,8 +23,8 @@
       <h1 id="headHov">
        <!-- <span role="img" aria-label="money">💸</span> -->
         <i class="fa-solid fa-clipboard-question fa-beat-fade" style="color: #e4980c;"></i>
-        <a id="survey" href="/">Survey</a> 
-        <a id="manSer" href="/">Management Service!</a>
+        <a id="survey" href="/">Survey Management Service!</a> 
+        
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
@@ -33,7 +32,9 @@
         <a href="/profile">Profile</a> |
         <button class="no-button" id="logout">Logout</button>
         {{else}}
-        <div id="loginBut"><a href="/login">CHOOSE</a></div>
+        <div id="loginBut"><a href="/login">CHOOSE</a>
+        <button class="dropBtn" href="/login">CHOOSE</button>
+        </div>
         
         {{/if}}
       </nav>
