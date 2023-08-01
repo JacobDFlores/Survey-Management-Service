@@ -1,17 +1,63 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "needed_funding": 5000
+    "name": "Whats your favorite...",
+    "description": "A survey that lets people choose their favorite items from a given selection",
+    "questions": [
+      {
+        "question": "What is your favorite color?",
+        "answer1": "Blue",
+        "answer2": "Red",
+        "answer3": "Green",
+        "answer4": "Purple"
+      },
+      {
+        "question": "What is your favorite animal?",
+        "answer1": "Panda",
+        "answer2": "Lion",
+        "answer3": "Shark",
+        "answer4": "Kangaroo"
+      },
+      {
+        "question": "What is your favorite fast food?",
+        "answer1": "Hot-Dogs",
+        "answer2": "Hamburgers",
+        "answer3": "Chicken nuggets",
+        "answer4": "Tacos"
+      }
+    ]
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
+    "name": "Would you rather...",
+    "description": "A series of fun would you rather prompts",
+    "questions": [
+      {
+        "question": "Would you rather fight an adult wolf or a teen grizzly bear",
+        "answer1": "Adult wolf",
+        "answer2": "Teen-age grizzly bear"
+      },
+      {
+        "question": "Would you rather swim across a lake of pirhannas or crawl across a field of spiders",
+        "answer1": "Swim with the fishes",
+        "answer2": "Crawl with buggies"
+      },
+      {
+        "question": "Would you rather have iced or hot coffee?",
+        "answer1": "Iced coffee",
+        "answer2": "Hot coffee"
+      }
+    ]
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
+    "name": "Whos going to find the One Piece?",
+    "description": "A small poll to vote for who will find that legendary treasure.",
+    "questions": [
+      {
+        "question": "Whos going to find that legendary pirate treasure, THE ONE PIECE?",
+        "answer1": "Red-haired Shanks",
+        "answer2": "Straw hat Luffy",
+        "answer3": "Buggy the Clown",
+        "answer4": "Blackbeard"
+      }
+    ]
   }
 ]

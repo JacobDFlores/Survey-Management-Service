@@ -23,8 +23,8 @@ Surveys.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
-      type: DataTypes.FLOAT,
+    questions: {
+      type: DataTypes.JSON,
       allowNull: false,
     },
     user_id: {
