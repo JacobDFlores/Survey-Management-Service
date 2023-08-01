@@ -27,6 +27,28 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/survey/:id', async (req, res) => {
+  try {
+    const surveyData = await Surveys.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const survey = surveyData.get({ plain: true });
+
+    res.render('survey', {
+      ...survey,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
