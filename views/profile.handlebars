@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+  {{#if surveys.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Surveys:</h3>
+
+    {{#each surveys as |survey|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/survey/{{survey.id}}">{{survey.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{survey.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/delete.js"></script>
