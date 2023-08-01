@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Surveys, User } = require('../models');
+const { Surveys, User, Response } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -21,6 +21,28 @@ router.get('/', async (req, res) => {
     res.render('homepage', {  
       surveys,
       logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/survey/:id', async (req, res) => {
+  try {
+    const surveyData = await Surveys.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const survey = surveyData.get({ plain: true });
+
+    res.render('survey', {
+      ...survey,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -56,5 +78,50 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+// View survey data for a specific survey on the profile page
+// router.get('/survey/:survey_id', withAuth, async (req, res) => {
+//   try {
+//     const surveyData = await Surveys.findByPk(req.params.survey_id, {
+//       include: [
+//         {
+//           model: Response,
+//           attributes: ['question', 'answer'],
+//         },
+//       ],
+//     });
+
+//     if (!surveyData) {
+//       res.status(404).json({ message: 'Survey not found' });
+//       return;
+//     }
+
+//     const { name, description, responses } = surveyData.get({ plain: true });
+
+//     // Convert the responses into a format suitable for Chart.js
+//     const chartData = {
+//       labels: responses.map((response) => response.question),
+//       datasets: [
+//         {
+//           label: 'Survey Responses',
+//           data: responses.map((response) => response.answer),
+//           backgroundColor: 'rgba(75, 192, 192, 0.2)',
+//           borderColor: 'rgba(75, 192, 192, 1)',
+//           borderWidth: 1,
+//         },
+//       ],
+//     };
+
+//     res.render('profile', {
+//       name,
+//       description,
+//       chartData,
+//       logged_in: true,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 
 module.exports = router;
