@@ -24,8 +24,9 @@ Surveys.init(
       defaultValue: DataTypes.NOW,
     },
     questions: {
-      type: 
-    }
+      type: DataTypes.JSON,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
