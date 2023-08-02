@@ -19,7 +19,8 @@ Response.init(
             },
         },
         response: {
-            type: Data
+            type: DataTypes.JSON,
+            allowNull: false,
         }
     },
     {
