@@ -35,15 +35,13 @@ h1 {
 
 
 header{
-  background-color: #3280ce;
-  box-shadow: 10px grey;
+  background-color: #0a7ff4;
+  
 }
 .bodyBack{
   background-color: #fbfcfe;
 }
-#choiceBut:hover{
-  
-}
+
 /* Grouping content
    ========================================================================== */
 /**
@@ -349,31 +347,25 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
-#survey{
+#survey, #createBut, .no-button, #login{
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 100%;
   color: #e4980c;
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Teko', sans-serif;
 }
-#manSer{
-  color: #f4f1ed;
-  font-size: 2.0rem;
-  font-family: 'Kanit', sans-serif;
+
+#login{
+  color:#e4980c;
 }
-#loginBut{
-  color:rgba(4, 208, 38, 0.986);
-}
- #headHov:hover{
-    
-    color: #0ebcf1;
-    
-  
-}
+ 
 h1 {
   
   
@@ -387,19 +379,6 @@ h2 {
 h3 {
   font-size: 1.75rem;
 }
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-
-h6 {
-  font-size: 1rem;
-}
-
 p {
   
   color: rgb(28, 11, 11);

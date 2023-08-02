@@ -7,6 +7,9 @@
   <title>Fund My Project!</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&family=Kanit:ital,wght@1,300&family=Teko:wght@500&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/2308c32654.js" crossorigin="anonymous"></script>
 </head>
 
@@ -16,16 +19,16 @@
       <h1>
         <span role="img" aria-label="money"></span>
         <i class="fa-solid fa-clipboard-question fa-beat" style="color: #e4980c;"></i>
-        <a href="/">Survey Management Service!</a>
+        <a id="survey" href="/">Survey Management Service</a>
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/create">Create</a> |
+        <a id="createBut" href="/create">Create</a> |
         <a href="/profile">Profile</a> |
         <button class="no-button" id="logout">Logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a id="login" href="/login">New User/Login</a>
         {{/if}}
       </nav>
     </header>
