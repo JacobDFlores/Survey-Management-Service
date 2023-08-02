@@ -3,12 +3,24 @@
   <p>{{{get_emoji}}}</p>
   <p>{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
+
+  {{#each questions as |question| }}
+    <p>{{question.question}}</p>
+  {{#if question.answer1}}
+    <button>{{question.answer1}}</button>
+  {{/if}}
+  {{#if question.answer2}}
+  <button>{{question.answer2}}</button>
+  {{/if}}
+  {{#if question.answer3}}
+  <button>{{question.answer3}}</button>
+  {{/if}}
+  {{#if question.answer4}}
+  <button>{{question.answer4}}</button>
+  {{/if}}
+  <div style="margin-bottom: 15px"></div>
+  {{/each}}
+
 </div>
+
+<script src="./js/form.js"></script>
