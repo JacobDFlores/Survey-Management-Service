@@ -18,14 +18,10 @@ Response.init(
                 key: 'id',
             },
         },
-        question: {
-            type: DataTypes.STRING,
+        response: {
+            type: DataTypes.JSON,
             allowNull: false,
-        },
-        answer: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+        }
     },
     {
         sequelize,
