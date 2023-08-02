@@ -351,6 +351,9 @@ h3 {
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
+#surveyTitle{
+  color:#e4980c;
+}
 #survey, #createBut, .no-button, #login{
   background: none;
   border: none;
@@ -844,6 +847,9 @@ button {
 
 .text-center {
   text-align: center !important;
+  background-color:#0a6fd58f;
+  border-radius: 15px;
+  padding-bottom: 10px;
 }
 
 .text-justify {

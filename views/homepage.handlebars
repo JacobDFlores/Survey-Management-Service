@@ -1,7 +1,7 @@
 {{#each surveys as |survey| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
-    <h2>
+    <h2 id="surveyTitle">
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
       <a href="/survey/{{survey.id}}">{{survey.name}}</a>
