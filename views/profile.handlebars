@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2 id="welcomeProf" >Welcome, {{name}}!</h2>
   </div>
 </div>
 
@@ -11,7 +11,9 @@
     {{#each surveys as |survey|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/survey/{{survey.id}}">{{survey.name}}</a></h4>
+        <h4>
+          <i class="fa-solid fa-clipboard-check fa-2xl" style="color: #e4980c;"></i>
+          <a id="linkTag" href="/survey/{{survey.id}}">{{survey.name}}</a></h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{survey.id}}">DELETE</button>

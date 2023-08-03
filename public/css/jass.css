@@ -41,7 +41,9 @@ header{
 .bodyBack{
   background-color: #fbfcfe;
 }
-
+button{
+  font-family: 'Teko', sans-serif;
+}
 /* Grouping content
    ========================================================================== */
 /**
@@ -158,6 +160,7 @@ input,
 optgroup,
 select,
 textarea {
+
   font-family: inherit;
   /* 1 */
   font-size: 100%;
@@ -354,7 +357,7 @@ h3 {
 #surveyTitle{
   color:#e4980c;
 }
-#survey, #createBut, .no-button, #login{
+#survey, #createBut, .no-button, #login, #profileTab{
   background: none;
   border: none;
   padding: 0;
@@ -364,6 +367,23 @@ h3 {
   color: #e4980c;
   font-family: 'Teko', sans-serif;
 }
+#linkTag, #surveyName{
+  color:white;
+  font-family: 'Crimson Text', serif;
+  font-size: 2rem;
+}
+#surveyName:hover{
+  color:#eeba59;
+}
+#linkTag:hover{
+  color:#eeba59;
+}
+#SurveyRendered:hover{
+  color:#eeba59;
+}
+.btn, .btn-primary{
+  font-family: 'Crimson Text', serif;
+}
 h1 {
   
   
@@ -372,6 +392,21 @@ h1 {
 
 h2 {
   font-size: 2rem;
+}
+#SurveyRendered{
+  color:white;
+  font-family: 'Crimson Text', serif;
+}
+#welcomeProf, .label{
+  color:white;
+  font-family: 'Crimson Text', serif;
+  text-align: center;
+}
+ #h2login, #h2signup, #questAns, #CreateNew{
+  color:white;
+  font-family: 'Crimson Text', serif;
+  text-align: center;
+  text-decoration: underline;
 }
 
 h3 {
@@ -989,7 +1024,7 @@ button {
   text-align: center;
 }
 
-.btn.btn-primary {
+.btn, .btn-primary {
   background-color: #e4980c;
   color: #244d4a;
 }
@@ -999,12 +1034,13 @@ button {
 }
 
 .btn.btn-danger {
-  background-color: #e64c66;
-  color: #ffffff;
+  background-color: #e4980c;
+  color: white;
+  margin-top: 15px;
 }
 
 .btn.btn-danger:hover {
-  background-color: #ee8294;
+  background-color: #eeba59;
 }
 
 .btn.btn-info {
@@ -1111,14 +1147,6 @@ form .form-textarea {
   display: block;
 }
 
-form select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-  background-repeat: no-repeat;
-  background-position-x: 98%;
-  background-position-y: 50%;
-}
 
 form label,
 form .form-label {
