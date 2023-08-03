@@ -7,16 +7,16 @@
   {{#each questions as |question| }}
     <p>{{question.question}}</p>
   {{#if question.answer1}}
-    <button>{{question.answer1}}</button>
+    <button class="buttsClass">{{question.answer1}}</button>
   {{/if}}
   {{#if question.answer2}}
-  <button>{{question.answer2}}</button>
+  <button class="buttsClass">{{question.answer2}}</button>
   {{/if}}
   {{#if question.answer3}}
-  <button>{{question.answer3}}</button>
+  <button class="buttsClass">{{question.answer3}}</button>
   {{/if}}
   {{#if question.answer4}}
-  <button>{{question.answer4}}</button>
+  <button class="buttsClass">{{question.answer4}}</button>
   {{/if}}
   <div style="margin-bottom: 15px"></div>
   {{/each}}
