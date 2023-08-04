@@ -37,11 +37,18 @@ router.get('/survey/:id', async (req, res) => {
         },
       ],
     });
-    console.log("surveyData", surveyData)
+
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Surveys }],
+    });
+
     const survey = surveyData.get({ plain: true });
+    const user = userData.get({ plain: true });
 
     res.render('survey', {
       ...survey,
+      ...user,
       logged_in: req.session.logged_in
     });
 
