@@ -1,6 +1,6 @@
 <div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
+  <h2 id="surveyName">{{name}}</h2>
+<i class="fa-solid fa-comment fa-2xl" style="color: #ffffff;"></i> 
   <p>{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
 
@@ -11,16 +11,16 @@
     {{/each}} --}}
 
   {{#if question.answer1}}
-    <button>{{question.answer1}}</button>
+    <button class="buttsClass">{{question.answer1}}</button>
   {{/if}}
   {{#if question.answer2}}
-  <button>{{question.answer2}}</button>
+  <button class="buttsClass">{{question.answer2}}</button>
   {{/if}}
   {{#if question.answer3}}
-  <button>{{question.answer3}}</button>
+  <button class="buttsClass">{{question.answer3}}</button>
   {{/if}}
   {{#if question.answer4}}
-  <button>{{question.answer4}}</button>
+  <button class="buttsClass">{{question.answer4}}</button>
   {{/if}}
   <div style="margin-bottom: 15px"></div>
   {{/each}}

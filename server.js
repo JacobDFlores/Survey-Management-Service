@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+var favicon = require('serve-favicon')
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
@@ -11,7 +12,8 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+console.log(path.join(__dirname, 'public', 'favicon.ico'));
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
 

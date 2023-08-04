@@ -22,4 +22,11 @@ This application allows users to login to their SMS account to view, fill out, c
 
 ## Resources
 
+Icons from:
+https://fontawesome.com/icons
 
+Favicon from:
+https://icons8.com/icon/11765/clipboard
+
+Fonts From:
+https://fonts.google.com/
