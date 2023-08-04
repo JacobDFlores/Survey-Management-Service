@@ -6,13 +6,16 @@ header{
   
 }
 footer{
-  font-family:'Teko', sans-serif;
-  text-align: center;
-  display: flex;
-  color:#e4980c;
-  margin-top: 200px;
+  display: block;
+  margin-top: 600px;
   height: 50px;
   background-color: #0a7ff4
+}
+#footPara{
+  display: block;
+  color:#e4980c;
+  font-family:'Teko', sans-serif;
+  text-align: center;
 }
 .bodyBack{
   background-color: #fbfcfe;
@@ -121,6 +124,7 @@ button.buttsClass:hover{
   background-color: #eeba59;
 }
 button.buttsClass{
+  cursor: pointer;
   border-radius: .3rem;
   background-color: #e4980c;
   padding-right:10px;
@@ -289,6 +293,7 @@ h3 {
   font-size: 100%;
   color: #e4980c;
   font-family: 'Teko', sans-serif;
+  font-size: 2rem;
 }
 button.btn.btn-sm.btn.btn-danger{
   margin: 30px;
@@ -299,7 +304,7 @@ button.btn.btn-primary{
 }
 #linkTag, #surveyName{
   color:white;
-  font-family: 'Crimson Text', serif;
+ font-family: 'Josefin Sans', sans-serif;
   font-size: 2rem;
   text-decoration: none;
 }
@@ -314,7 +319,13 @@ h2 {
 }
 #SurveyRendered{
   color:white;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Josefin Sans', sans-serif;
+}
+#SurveyRendered:hover{
+  color: #49453c;
+}
+#linkTag:hover{
+  color:#49453c;
 }
 a#SurveyRendered{
   text-decoration: none;
@@ -329,7 +340,7 @@ a#SurveyRendered{
   font-size: 2.25rem;
   font-family: 'Crimson Text', serif;
   text-align: center;
-}
+ }
 h3 {
   font-size: 1.75rem;
 }
