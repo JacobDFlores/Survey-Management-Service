@@ -15,12 +15,14 @@ const newFormHandler = async (event) => {
       questions: [],
     };
 
+    console.log(questions);
+    console.log(answerInputs);
     for (let i = 0; i < questions.length; i++) {
       const questionText = questions[i].value.trim();
       const answerChoices = [];
       // Collects answer choices for the current question
       const answerInputsForQuestion = document.querySelectorAll(`[name="question-${i}"]`);
-      answerInputsForQuestion.forEach((answerInput) => {
+      answerInputs.forEach((answerInput) => {
         const answerText = answerInput.value.trim();
         if (answerText) {
           answerChoices.push(answerText);
