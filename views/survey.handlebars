@@ -6,6 +6,10 @@
 
   {{#each questions as |question| }}
     <p>{{question.question}}</p>
+    {{!-- {{#each question.answers as |answer| }}
+    <button>{{answer}}</button>
+    {{/each}} --}}
+
   {{#if question.answer1}}
     <button>{{question.answer1}}</button>
   {{/if}}

@@ -37,7 +37,7 @@ router.get('/survey/:id', async (req, res) => {
         },
       ],
     });
-
+    console.log("surveyData", surveyData)
     const survey = surveyData.get({ plain: true });
 
     res.render('survey', {
