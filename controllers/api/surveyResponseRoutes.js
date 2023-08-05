@@ -5,8 +5,12 @@ const withAuth = require('../../utils/auth');
 router.post('/:survey_id', async (req, res) => {
     console.log(req.body)
     try {
-        const response = await Response.create(req.body);
-        res.status(201).json(response);
+        const newResponse = await Response.create({
+            ...req.body,
+            survey_id: req.params.survey_id,
+            user_id: req.session.user_id,
+          });
+        res.status(201).json(newResponse);
     }catch (err) {
         res.status(500).json(err);
     }

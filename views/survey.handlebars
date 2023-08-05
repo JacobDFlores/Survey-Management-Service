@@ -6,7 +6,7 @@
 
   {{#each questions as |question| }}
   
-  <p id='question{{@index}}'>{{question.question}}</p>
+  <p id='question{{@index}}' class="question">{{question.question}}</p>
 
   {{#if question.answer1}}
     <button type="submit" class="buttsClass" type="answer1" value="{{question.answer1}}"
@@ -29,7 +29,7 @@
   {{/if}}
 
   <p>Answer:</p>
-  <p id='answer{{@index}}'></p>
+  <p id='answer{{@index}}' class="userAnswer"></p>
   <div style="margin-bottom: 15px"></div>
   {{/each}}
 

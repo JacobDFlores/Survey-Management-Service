@@ -38,6 +38,10 @@ router.get('/survey/:id', withAuth, async (req, res) => {
       ],
     });
 
+    // req.session.save(() => {
+    //   req.session.survey_id = surveyData.id;
+    // });
+
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Surveys }],

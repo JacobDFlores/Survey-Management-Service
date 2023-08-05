@@ -20,4 +20,13 @@ Response.belongsTo(Surveys, {
   foreignKey: 'survey_id',
 });
 
+User.hasMany(Response, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+Response.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
 module.exports = { User, Surveys, Response };
