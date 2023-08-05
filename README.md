@@ -41,3 +41,5 @@ This application allows users to login to their SMS account to view, fill out, c
 * [Favicon](https://icons8.com/icon/11765/clipboard)
 
 * [Fonts](https://fonts.google.com/)
+
+* [NPM Chart.js](https://www.npmjs.com/package/chart.js?activeTab=readme)
