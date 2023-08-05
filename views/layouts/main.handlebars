@@ -31,8 +31,17 @@
         {{/if}}
       </nav>
     </header>
+    <div id="banner" class="banner">
+      <p id="Welcome" style="color: white; margin: 0;">
+        Welcome To Survey Management Service, your one stop shop for creating and
+        filling out surveys. All you need to start is an account! You can 
+        sign-up now or login if you already have
+        an account with us. Then you're free to create your own 
+        surveys or answer some made by other users as well!. Simply click new user/login to create
+        a profile or login, then click create and begin creating your own surveys today!
+      </p>
+    </div>
     <main class="container container-fluid mt-5">
-      <p id="Welcome">Welcome To Survey Management Service, your one stop shop for creating and filling out surveys. Here you can create a profile and login and then create your own surveys and fill out others that have been created. Simply click new user/login to create a profile or login, then click create and begin creatging your own surveys today!</p>
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
@@ -41,6 +50,7 @@
     </footer>
   </div>
 
+  <script src="/js/root.js"></script>
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>

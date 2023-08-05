@@ -14,3 +14,17 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+.banner {
+  padding:15px;
+  margin:10px 0 10px 0;
+  height: max-content;
+  width:100%;
+  background-color: #0053ab;
+}
+
+.banner p{
+  text-align:left;
+  padding: 0 1em 0 1em;
+  font-family: 'Josefin Sans', sans-serif;
+}
