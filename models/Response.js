@@ -11,6 +11,10 @@ Response.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        user_response: {
+            type: DataTypes.JSON,
+            allowNull: false,
+        },
         survey_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -18,10 +22,13 @@ Response.init(
                 key: 'id',
             },
         },
-        response: {
-            type: DataTypes.JSON,
-            allowNull: false,
-        }
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'user',
+              key: 'id',
+            },
+          },
     },
     {
         sequelize,
