@@ -295,7 +295,7 @@ h3 {
   font-family: 'Teko', sans-serif;
   font-size: 2rem;
 }
-button.btn.btn-sm.btn.btn-danger{
+button.btn.btn-sm.btn.btn-danger.btn-success{
   margin: 30px;
 }
 button.btn.btn-primary{
@@ -854,9 +854,13 @@ button {
   background-color: #e4980c;
   color: white;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 .btn.btn-danger:hover {
   background-color: #eeba59;
+}
+.btn.btn-success{
+  margin-bottom: 15px;
 }
 .btn.btn-info {
   background-color: #1bbc9b;
@@ -1472,3 +1476,11 @@ form [type='radio'] {
     align-content: center;
   }
 }
+
+/* .alert {
+  padding: 10px;
+  border: 1px solid #d8000c;
+  background-color: #ffbaba;
+  color: #d8000c;
+  margin-bottom: 15px;
+} */

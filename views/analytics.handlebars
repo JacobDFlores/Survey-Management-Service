@@ -1,0 +1,53 @@
+<div class="text-center">
+  <h2 id="surveyName">{{name}} - Data Analytics</h2>
+  <canvas id="polarChart" width="400" height="400"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    const responseData =  {{json responseData}};
+    console.log(responseData);
+
+
+    const labels = ['Question 1', 'Question 2', 'Question 3', 'Question 4']; 
+    const data = {
+        labels: labels,
+        datasets: [{
+        label: 'Response Data',
+        data: responseData, 
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.5)',
+            'rgba(54, 162, 235, 0.5)',
+            'rgba(255, 206, 86, 0.5)',
+            'rgba(75, 192, 192, 0.5)',
+            ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+        ],
+        borderWidth: 5,
+      }],
+    };
+    
+    // Chart.js configuration
+    const config = {
+      type: 'polarArea',
+      data: data,
+      options: {
+        scales: {
+          r: {
+            beginAtZero: true,
+          },
+        },
+      },
+    };
+
+    // Create the chart
+    const ctx = document.getElementById('polarChart').getContext('2d');
+    new Chart(ctx, config);
+  });
+</script>
