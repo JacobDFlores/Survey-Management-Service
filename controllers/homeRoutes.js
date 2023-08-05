@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/survey/:id', async (req, res) => {
+router.get('/survey/:id', withAuth, async (req, res) => {
   try {
     const surveyData = await Surveys.findByPk(req.params.id, {
       include: [
