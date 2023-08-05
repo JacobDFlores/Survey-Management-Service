@@ -32,7 +32,7 @@ const submitForm = async (event) => {
 
     // This is the object that we are going to send in our fetch, we need to build its response array
     const userResponse = {
-        response: []
+        user_response: [],
     }
 
     // This for loop iterates over the questions array and creates an object for each question and answer. 
@@ -41,27 +41,29 @@ const submitForm = async (event) => {
         const resObject = {};
         resObject.question = questions[i];
         resObject.userAnswer = answers[i];
-        userResponse.response.push(resObject);
+        userResponse.user_response.push(resObject);
     }
 
     // Grab survey Id from url before fetch
     const url = window.location.toString().split("/");
-    const survey_id = url[url.length - 1];
-       
-    const response = await fetch(`/api/responses/${survey_id}`, {
+    const surv_id = url[url.length - 1];
+    
+    console.log(surv_id);
+
+    const response = await fetch(`/api/responses/${surv_id}`, {
         method: 'POST',
         body: JSON.stringify(userResponse),
         headers: {
           'Content-Type': 'application/json',
         },
-      });
+    });
   
-      if (response.ok) {
+    if (response.ok) {
         alert('created response successfully');
         document.location.replace('/');
-      } else {
+    } else {
         alert('Failed to complete survey response');
-      }  
+    }  
 }
 
 document.querySelector('.survey-question').addEventListener('submit', submitForm);

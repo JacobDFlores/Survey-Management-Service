@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Response } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/:survey_id', async (req, res) => {
+router.post('/:survey_id', withAuth, async (req, res) => {
     console.log(req.body)
     try {
         const newResponse = await Response.create({
@@ -12,6 +12,7 @@ router.post('/:survey_id', async (req, res) => {
           });
         res.status(201).json(newResponse);
     }catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 });
