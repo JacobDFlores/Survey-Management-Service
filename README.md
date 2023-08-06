@@ -49,3 +49,5 @@ This application allows users to login to their SMS account to view, fill out, c
 * [Fonts](https://fonts.google.com/)
 
 * [NPM Chart.js](https://www.npmjs.com/package/chart.js?activeTab=readme)
+
+* [Ileriayo's Markdown-badges](https://ileriayo.github.io/markdown-badges/)
