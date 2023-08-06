@@ -71,6 +71,7 @@ small {
 }
 button.buttsClass:hover{
   background-color: #eeba59;
+  transform: scale(1.1);
 }
 button.buttsClass{
   cursor: pointer;
@@ -83,27 +84,9 @@ button.buttsClass{
   font-family: 'Crimson Text', serif;
   color:white;
   border: none;
-   box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030;
 }
-/**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
+
 /**
  * Correct the padding in Firefox.
  */
@@ -117,13 +100,6 @@ progress {
   vertical-align: baseline;
 }
 /**
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
-  height: auto;
-}
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
@@ -162,7 +138,7 @@ h3 {
 #surveyTitle{
   color:#e4980c;
 }
-#survey, #createBut, .no-button, #login, #profileTab{
+#survey, #createBut, .no-button, #profileTab{
   background: none;
   border: none;
   padding: 0;
@@ -172,6 +148,19 @@ h3 {
   color: #e4980c;
   font-family: 'Teko', sans-serif;
   font-size: 2rem;
+  transition: color 1.5s;
+}
+#login{
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 100%;
+  color: #e4980c;
+  font-family: 'Teko', sans-serif;
+  font-size: 2rem;
+  transition: color 1.5s;
 }
 button.btn.btn-sm.btn.btn-danger{
   margin: 30px;
@@ -182,7 +171,9 @@ button.btn.btn-primary{
   box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
 }
 #add-question-btn{
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
 }
 #linkTag, #surveyName{
@@ -197,6 +188,9 @@ button.btn.btn-primary{
 #subBut{
   margin: auto;
 }
+#subBut:hover{
+  transform: scale(1.1);
+}
 h1 {
   font-size: 3rem;
 }
@@ -206,6 +200,7 @@ h2 {
 #SurveyRendered{
   color:white;
   font-family: 'Josefin Sans', sans-serif;
+  transition: color 1.5s;
 }
 #SurveyRendered:hover{
   color: #49453c;
@@ -256,6 +251,7 @@ input.answer-input.form-input.mt-1{
   color: black;
   font-family: 'Crimson Text', serif;
   border:none;
+  margin-top: 20px;
   flex-direction: row;
   box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030;
 
@@ -711,6 +707,7 @@ button {
 }
 .btn.btn-primary:hover {
   background-color: #ffa704;
+  transform: scale(1.1);
 }
 .no-button:hover{
     color: #fefefe;
