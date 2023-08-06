@@ -14,7 +14,7 @@ This application allows users to login to their SMS account to view, fill out, c
 
 ## Deployed-URL
 
-<a href="https://warm-journey-42011-7d46ef37db5e.herokuapp.com/"> Link to application</a>
+<a href="https://surveymanagementservice-78eff0501a9f.herokuapp.com/"> Link to application</a>
 
 ## Screenshots
 
