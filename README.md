@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Description
-This application allows users to login to their SMS account to view, fill out, create, and manage your own surveys. 
+Survey Management Services (SMS) was created to allow our users to create custom surveys with a user-friendly interface. Upon sign up or login, the user will be allowed to create and view past created surveys. But it doesn't stop there! We implemented an option to view data analytics to provide insight on all gathered data.
 
 ## Table of Contents
 
