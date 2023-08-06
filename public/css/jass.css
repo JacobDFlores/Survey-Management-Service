@@ -3,13 +3,14 @@ body {
 }
 header{
   background-color: #0a7ff4;
-  
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
 }
 footer{
   display: block;
   margin-top: 600px;
   height: 50px;
   background-color: #0a7ff4
+  
 }
 #footPara{
   display: block;
@@ -182,9 +183,11 @@ button.btn.btn-sm.btn.btn-danger{
 button.btn.btn-primary{
   margin-left: 40%;
   margin-right: 25%;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
 }
 #add-question-btn{
   margin-bottom: 10px;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
 }
 #linkTag, #surveyName{
   color:white;
@@ -242,7 +245,7 @@ div#questions-container{
   margin: auto;
 }
 #CurSur, #SurName, #SurDes{
-  font-family: 'Crimson Text', serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 2rem;
 }
 h3#CurSur{
@@ -257,6 +260,7 @@ input.answer-input.form-input.mt-1{
   color: black;
   font-family: 'Crimson Text', serif;
   border:none;
+  flex-direction: row;
 }
 input.question-input.form-input.mt-2::placeholder{
   color:lightgrey;
@@ -281,7 +285,7 @@ textarea#project-desc.form-input::placeholder{
 p {
   
   color: rgb(6, 6, 6);
-  font-family: 'Crimson Text', serif;
+  font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   font-size: 1.1rem;
   margin: 0 0 1rem;
@@ -724,6 +728,7 @@ button {
   background-color: #e4980c;
   color: white;
   margin-top: 15px;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
 }
 .btn.btn-danger:hover {
   background-color: #eeba59;
@@ -1103,6 +1108,10 @@ form [type='radio'] {
 }
 /* col-lg */
 @media screen and (min-width: 992px) {
+  input.answer-input.form-input-mt-1{
+    display: flex;
+    flex-direction: row;
+  }
   .text-center{
     margin: auto;
     width: 50%;
