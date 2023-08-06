@@ -18,10 +18,10 @@ Survey Management Services (SMS) was created to allow our users to create custom
 
 ## Screenshots
 
-![Home Page](/Survey-Management-Service/public/images/Image%208-6-23%20at%2012.59%20AM.jpg)
-![Survey](/Survey-Management-Service/public/images/Screenshot%202023-08-06%20at%201.06.31%20AM.png)
-![Create Survey](/Survey-Management-Service/public/images/Screenshot%202023-08-06%20at%201.06.46%20AM.png)
-![Profile & List of Accounts Surveys](/Survey-Management-Service/public/images/Screenshot%202023-08-06%20at%201.07.46%20AM.png)
+![Home Page](./public/images/Image%208-6-23%20at%2012.59%20AM.jpg)
+![Survey](./public/images/Screenshot%202023-08-06%20at%201.06.31%20AM.png)
+![Create Survey](./public/images/Screenshot%202023-08-06%20at%201.06.46%20AM.png)
+![Profile & List of Accounts Surveys](./public/images/Screenshot%202023-08-06%20at%201.07.46%20AM.png)
 
 ## Badges
 * ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
