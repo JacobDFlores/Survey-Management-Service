@@ -3,13 +3,14 @@ body {
 }
 header{
   background-color: #0a7ff4;
-  
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
 }
 footer{
   display: block;
   margin-top: 600px;
   height: 50px;
   background-color: #0a7ff4
+  
 }
 #footPara{
   display: block;
@@ -41,37 +42,6 @@ hr {
   /* 2 */
 }
 /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
-}
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
-a {
-  background-color: transparent;
-}
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
-}
-
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
@@ -92,36 +62,9 @@ samp {
   font-size: 1em;
   /* 2 */
 }
-
-/**
- * Add the correct font size in all browsers.
- */
-small {
-  font-size: 80%;
-}
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-}
 button.buttsClass:hover{
   background-color: #eeba59;
+  transform: scale(1.1);
 }
 button.buttsClass{
   cursor: pointer;
@@ -134,44 +77,9 @@ button.buttsClass{
   font-family: 'Crimson Text', serif;
   color:white;
   border: none;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030;
 }
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-button,
-input {
-  /* 1 */
-  overflow: visible;
-}
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button,
-select {
-  /* 1 */
-  text-transform: none;
-}
-/**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
+
 /**
  * Correct the padding in Firefox.
  */
@@ -185,32 +93,6 @@ progress {
   vertical-align: baseline;
 }
 /**
- * Remove the default vertical scrollbar in IE 10+.
- */
-textarea {
-  overflow: auto;
-}
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-[type='checkbox'],
-[type='radio'] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
-  height: auto;
-}
-
-
-
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
@@ -228,44 +110,9 @@ textarea {
   font: inherit;
   /* 2 */
 }
-
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
 details {
   display: block;
-}
-
-/*
- * Add the correct display in all browsers.
- */
-summary {
-  display: list-item;
-}
-
-/* Misc
-   ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
-template {
-  display: none;
-}
-
-/**
- * Add the correct display in IE 10.
- */
-[hidden] {
-  display: none;
-}
-
-/* 
-=================
-END NORMALIZE CSS
-=================
-*/
+} 
 *,
 *::before,
 *::after {
@@ -281,10 +128,16 @@ h3 {
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
+#homepagePara{
+  margin-top: 20px;
+}
+#home2para{
+  margin-top: 15px;
+}
 #surveyTitle{
   color:#e4980c;
 }
-#survey, #createBut, .no-button, #login, #profileTab{
+#survey, #createBut, .no-button, #profileTab{
   background: none;
   border: none;
   padding: 0;
@@ -294,6 +147,19 @@ h3 {
   color: #e4980c;
   font-family: 'Teko', sans-serif;
   font-size: 2rem;
+  transition: color .25s;
+}
+#login{
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 100%;
+  color: #e4980c;
+  font-family: 'Teko', sans-serif;
+  font-size: 2rem;
+  transition: color .25s;
 }
 button.btn.btn-sm.btn.btn-danger{
   margin: 30px;
@@ -301,6 +167,13 @@ button.btn.btn-sm.btn.btn-danger{
 button.btn.btn-primary{
   margin-left: 40%;
   margin-right: 25%;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
+}
+#add-question-btn{
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
 }
 #linkTag, #surveyName{
   color:white;
@@ -308,8 +181,20 @@ button.btn.btn-primary{
   font-size: 2rem;
   text-decoration: none;
 }
+#paraDescript{
+  margin-top: 15px;
+}
 .btn, .btn-primary{
   font-family: 'Crimson Text', serif;
+}
+#subBut{
+  margin: auto;
+}
+#subBut:hover{
+  transform: scale(1.1);
+}
+#answerText{
+  margin-top: 20px;
 }
 h1 {
   font-size: 3rem;
@@ -317,10 +202,13 @@ h1 {
 h2 {
   font-size: 2rem;
 }
-#Welcome{}
 #SurveyRendered{
   color:white;
   font-family: 'Josefin Sans', sans-serif;
+  transition: color .25s;
+}
+#createdBy{
+  font-size: 1.25rem;
 }
 #SurveyRendered:hover{
   color: #49453c;
@@ -328,18 +216,21 @@ h2 {
 #linkTag:hover{
   color:#49453c;
 }
+#login:hover{
+  color: white;
+}
 a#SurveyRendered{
   text-decoration: none;
 }
 #welcomeProf, .label{
   color:white;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
 }
  #h2login, #h2signup, #questAns, #CreateNew{
   color:white;
   font-size: 2.25rem;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
  }
 h3 {
@@ -353,7 +244,7 @@ div#questions-container{
   margin: auto;
 }
 #CurSur, #SurName, #SurDes{
-  font-family: 'Crimson Text', serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 2rem;
 }
 h3#CurSur{
@@ -368,6 +259,10 @@ input.answer-input.form-input.mt-1{
   color: black;
   font-family: 'Crimson Text', serif;
   border:none;
+  margin-top: 20px;
+  flex-direction: row;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030;
+
 }
 input.question-input.form-input.mt-2::placeholder{
   color:lightgrey;
@@ -379,11 +274,21 @@ input.question-input.form-input.mt-2{
   font-family: 'Crimson Text', serif;
   padding-right: 37.5%;
   border:none;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
+}
+input#project-name.form-input::placeholder{
+  color:lightgrey;
+}
+textarea#project-desc.form-input::placeholder{
+  color:lightgrey;
+}
+.form-input{
+  font-family: 'Crimson Text', serif;
 }
 p {
   
   color: rgb(6, 6, 6);
-  font-family: 'Crimson Text', serif;
+  font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   font-size: 1.1rem;
   margin: 0 0 1rem;
@@ -400,7 +305,9 @@ dl {
 label {
   display: inline-block;
 }
-
+textare{
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
+}
 input,
 select,
 textarea,
@@ -749,50 +656,12 @@ button {
   padding-top: 1.625rem;
   padding-bottom: 1.625rem;
 }
-.text-uppercase {
-  text-transform: uppercase !important;
-}
-.text-lowercase {
-  text-transform: lowercase !important;
-}
-.text-center {
+.text-center{
   text-align: center !important;
   background-color:#0a6fd58f;
   border-radius: 15px;
   padding-bottom: 10px;
-}
-.text-justify {
-  text-align: justify !important;
-}
-.text-right {
-  text-align: right !important;
-}
-.text-primary {
-  color: #2d3e50 !important;
-}
-.text-info {
-  color: #1bbc9b !important;
-}
-.text-danger {
-  color: #e64c66 !important;
-}
-.text-default {
-  color: #aeaeae !important;
-}
-.text-light {
-  color: #d9e9e8 !important;
-}
-.text-dark {
-  color: #1a1a1a !important;
-}
-.text-white {
-  color: #ffffff !important;
-}
-.text-black {
-  color: #000000 !important;
-}
-.text-link {
-  color: #1b89bc !important;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
 }
 /* DISPLAY */
 .display-none {
@@ -824,9 +693,6 @@ button {
   background-color: #aeaeae;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
-.btn:hover {
-  background-color: #e71010;
-}
 .btn.btn-squared {
   border-radius: 0;
 }
@@ -849,80 +715,35 @@ button {
 }
 .btn.btn-primary:hover {
   background-color: #ffa704;
+  transform: scale(1.1);
 }
+.no-button:hover{
+    color: #fefefe;
+    text-decoration: underline;  
+}
+ #createBut:hover{
+    color: #fafaf9;
+    text-decoration: underline;
+ }
+ #profileTab:hover{
+  color: #fefefe;
+  text-decoration: underline;
+ }
+
 .btn.btn-danger {
   background-color: #e4980c;
   color: white;
   margin-top: 15px;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
 }
 .btn.btn-danger:hover {
   background-color: #eeba59;
 }
-.btn.btn-info {
-  background-color: #1bbc9b;
-  color: #ffffff;
-}
-.btn.btn-info:hover {
-  background-color: #31e1bd;
-}
-.btn.btn-light {
-  background-color: #d9e9e8;
-  color: #1a1a1a;
-}
-.btn.btn-light:hover {
-  background-color: #84b8b4;
-}
-.btn.btn-dark {
-  background-color: #1a1a1a;
-  color: #d9e9e8;
-}
-.btn.btn-dark:hover {
-  background-color: #5f5f5f;
-}
-.btn.btn-white {
-  background-color: #ffffff;
-  color: #1a1a1a;
-}
-.btn.btn-white:hover {
-  background-color: #cccccc;
-}
-.btn.btn-black {
-  background-color: #000000;
-  color: #ffffff;
-}
-.btn.btn-black:hover {
-  background-color: #666666;
-}
-.btn.btn-link {
-  background-color: #1b89bc;
-  color: #ffffff;
-}
-.btn.btn-link:hover {
-  background-color: #31a9e1;
-}
-.card {
-  border: 1px solid #1a1a1a;
-  margin-bottom: 1rem;
-}
-.card .card-header {
-  padding: 0.375rem;
-  background-color: #2d3e50;
-  color: #d9e9e8;
-}
 .card .card-body {
   padding: 0.375rem;
 }
-.card .card-footer {
-  border-top: 1px solid #1a1a1a;
-  padding: 0.375rem;
-}
-.card.card-rounded {
-  border-radius: 0.3rem;
-}
-.card.card-rounded .card-header {
-  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
-}
 #welcomeName{
+
   text-align: center;
 }
 #centerDiv{
@@ -939,7 +760,7 @@ form .form-group {
 }
 form .form-input,
 form .form-textarea {
-  display: block;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030;
 }
 form label,
 form .form-label {
@@ -1041,6 +862,7 @@ form [type='radio'] {
   flex-direction: row;
   margin-left: -15px;
   margin-right: -15px;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
 }
 [class*='col-'] {
   position: relative;
@@ -1102,6 +924,9 @@ form [type='radio'] {
 }
 /* col-sm */
 @media screen and (min-width: 640px) {
+ h2{
+  margin: auto;
+ }
   .col-sm-auto {
     flex-grow: 1;
     flex-basis: 0;
@@ -1290,6 +1115,14 @@ form [type='radio'] {
 }
 /* col-lg */
 @media screen and (min-width: 992px) {
+  input.answer-input.form-input-mt-1{
+    display: flex;
+    flex-direction: row;
+  }
+  .text-center{
+    margin: auto;
+    width: 50%;
+  }
   .col-md-auto {
     flex-grow: 1;
     flex-basis: 0;
