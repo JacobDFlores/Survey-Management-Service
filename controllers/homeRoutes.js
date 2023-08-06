@@ -130,21 +130,21 @@ router.get('/analytics/:id', withAuth, async (req, res) => {
     }
 
     const survey = surveyData.get({ plain: true });
-
+    console.log(survey);
     // Prepare the data for the chart
     const responseData = survey.responses.map((response) => {
-      return response.data; 
+      return response.user_response; // Return the user_response instead of response.data
     });
 
     res.render('analytics', {
       ...survey,
-      responseData,
-      logged_in: req.session.logged_in
+      responseDataJSON: JSON.stringify(responseData),
+      logged_in: req.session.logged_in,
     });
-
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;

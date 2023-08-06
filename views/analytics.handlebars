@@ -1,53 +1,90 @@
 <div class="text-center">
-  <h2 id="surveyName">{{name}} - Data Analytics</h2>
-  <canvas id="polarChart" width="400" height="400"></canvas>
+    <h2 id="surveyName">{{name}} - Data Analytics</h2>
+    <label for="questionDropdown">Select Question:</label>
+    <select id="questionDropdown">
+      <!-- Options will be populated dynamically using JavaScript -->
+    </select>
+    <canvas id="barChart" width="400" height="400"></canvas>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    const responseData = JSON.parse('{{{responseDataJSON}}}');
 
-    const responseData =  {{json responseData}};
-    console.log(responseData);
+    const answerDistribution = {};
 
+    responseData.forEach(responseSet => {
+      responseSet.forEach(response => {
+        if (!answerDistribution[response.question]) {
+          answerDistribution[response.question] = {};
+        }
+        if (!answerDistribution[response.question][response.userAnswer]) {
+          answerDistribution[response.question][response.userAnswer] = 0;
+        }
+        answerDistribution[response.question][response.userAnswer]++;
+      });
+    });
 
-    const labels = ['Question 1', 'Question 2', 'Question 3', 'Question 4']; 
-    const data = {
+    const questionDropdown = document.getElementById('questionDropdown');
+
+    // Populate the dropdown with the available questions
+    const allQuestions = Object.keys(answerDistribution);
+    allQuestions.forEach((question) => {
+      const option = document.createElement('option');
+      option.value = question;
+      option.innerText = question;
+      questionDropdown.appendChild(option);
+    });
+
+    // Function to display chart for selected question
+    function displayChartForQuestion(question) {
+      const labels = Object.keys(answerDistribution[question]);
+      const dataValues = Object.values(answerDistribution[question]);
+
+      const data = {
         labels: labels,
         datasets: [{
-        label: 'Response Data',
-        data: responseData, 
-        backgroundColor: [
+          label: question,
+          data: dataValues,
+          backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.5)',
             'rgba(255, 206, 86, 0.5)',
             'rgba(75, 192, 192, 0.5)',
-            ],
-        borderColor: [
+          ],
+          borderColor: [
             'rgba(255, 99, 132, 1)',
             'rgba(54, 162, 235, 1)',
             'rgba(255, 206, 86, 1)',
             'rgba(75, 192, 192, 1)',
-        ],
-        borderWidth: 5,
-      }],
-    };
-    
-    // Chart.js configuration
-    const config = {
-      type: 'polarArea',
-      data: data,
-      options: {
-        scales: {
-          r: {
-            beginAtZero: true,
-          },
-        },
-      },
-    };
+          ],
+          borderWidth: 2,
+        }]
+      };
 
-    // Create the chart
-    const ctx = document.getElementById('polarChart').getContext('2d');
-    new Chart(ctx, config);
+      const config = {
+        type: 'bar',
+        data: data,
+        options: { },
+      };
+
+      if (window.myChart) {
+        window.myChart.destroy();
+      }
+
+      const ctx = document.getElementById('barChart').getContext('2d');
+      window.myChart = new Chart(ctx, config);
+    }
+
+    // Initially, display the chart for the first question
+    displayChartForQuestion(allQuestions[0]);
+
+    // Add an event listener to the dropdown to update the chart when the selected question changes
+    questionDropdown.addEventListener('change', (e) => {
+      const selectedQuestion = e.target.value;
+      displayChartForQuestion(selectedQuestion);
+    });
+
   });
 </script>
