@@ -83,6 +83,7 @@ button.buttsClass{
   font-family: 'Crimson Text', serif;
   color:white;
   border: none;
+   box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030;
 }
 /**
  * Remove the inner border and padding in Firefox.
