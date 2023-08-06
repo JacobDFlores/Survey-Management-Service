@@ -116,11 +116,6 @@ progress {
   vertical-align: baseline;
 }
 /**
- * Remove the default vertical scrollbar in IE 10+.
- */
-textarea {
-  overflow: auto;
-}
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
@@ -261,6 +256,8 @@ input.answer-input.form-input.mt-1{
   font-family: 'Crimson Text', serif;
   border:none;
   flex-direction: row;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030;
+
 }
 input.question-input.form-input.mt-2::placeholder{
   color:lightgrey;
@@ -272,6 +269,7 @@ input.question-input.form-input.mt-2{
   font-family: 'Crimson Text', serif;
   padding-right: 37.5%;
   border:none;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
 }
 input#project-name.form-input::placeholder{
   color:lightgrey;
@@ -302,7 +300,9 @@ dl {
 label {
   display: inline-block;
 }
-
+textare{
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030
+}
 input,
 select,
 textarea,
@@ -753,7 +753,7 @@ form .form-group {
 }
 form .form-input,
 form .form-textarea {
-  display: block;
+  box-shadow: 0 4px 8px 0 #00000052, 0 6px 20px 0 #00000030;
 }
 form label,
 form .form-label {
