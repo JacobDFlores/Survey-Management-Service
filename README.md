@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Description
-This application allows users to login to their SMS account to view, fill out, create, and manage your own surveys. 
+Survey Management Services (SMS) was created to allow our users to create custom surveys with a user-friendly interface. Upon sign up or login, the user will be allowed to create and view past created surveys. But it doesn't stop there! We implemented an option to view data analytics to provide insight on all gathered data.
 
 ## Table of Contents
 
@@ -18,13 +18,10 @@ This application allows users to login to their SMS account to view, fill out, c
 
 ## Screenshots
 
-<img src="/Survey-Management-Service/public/images/Image 8-6-23 at 12.59 AM.jpg" alt="Home Page"/>
-
-<img src="/Survey-Management-Service/public/images/Screenshot 2023-08-06 at 1.06.31 AM.png" alt="Survey"/>
-
-<img src="/Survey-Management-Service/public/images/Screenshot 2023-08-06 at 1.06.46 AM.png" alt="Creating a Survey"/>
-
-<img src="/Survey-Management-Service/public/images/Screenshot 2023-08-06 at 1.07.46 AM.png" alt="Profile with list of your surveys"/>
+![Home Page](/Survey-Management-Service/public/images/Image%208-6-23%20at%2012.59%20AM.jpg)
+![Survey](/Survey-Management-Service/public/images/Screenshot%202023-08-06%20at%201.06.31%20AM.png)
+![Create Survey](/Survey-Management-Service/public/images/Screenshot%202023-08-06%20at%201.06.46%20AM.png)
+![Profile & List of Accounts Surveys](/Survey-Management-Service/public/images/Screenshot%202023-08-06%20at%201.07.46%20AM.png)
 
 ## Badges
 * ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
