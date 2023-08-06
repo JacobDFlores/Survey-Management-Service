@@ -68,27 +68,6 @@ samp {
 small {
   font-size: 80%;
 }
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-}
 button.buttsClass:hover{
   background-color: #eeba59;
 }
@@ -103,15 +82,6 @@ button.buttsClass{
   font-family: 'Crimson Text', serif;
   color:white;
   border: none;
-}
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button,
-select {
-  /* 1 */
-  text-transform: none;
 }
 /**
  * Remove the inner border and padding in Firefox.
@@ -174,28 +144,9 @@ textarea {
   font: inherit;
   /* 2 */
 }
-
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
 details {
   display: block;
-}
-
-/*
- * Add the correct display in all browsers.
- */
-summary {
-  display: list-item;
-}
-
-/* 
-=================
-END NORMALIZE CSS
-=================
-*/
+} 
 *,
 *::before,
 *::after {
@@ -232,6 +183,9 @@ button.btn.btn-primary{
   margin-left: 40%;
   margin-right: 25%;
 }
+#add-question-btn{
+  margin-bottom: 10px;
+}
 #linkTag, #surveyName{
   color:white;
  font-family: 'Josefin Sans', sans-serif;
@@ -260,18 +214,21 @@ h2 {
 #linkTag:hover{
   color:#49453c;
 }
+#login:hover{
+  color: white;
+}
 a#SurveyRendered{
   text-decoration: none;
 }
 #welcomeProf, .label{
   color:white;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
 }
  #h2login, #h2signup, #questAns, #CreateNew{
   color:white;
   font-size: 2.25rem;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
  }
 h3 {
@@ -311,6 +268,15 @@ input.question-input.form-input.mt-2{
   font-family: 'Crimson Text', serif;
   padding-right: 37.5%;
   border:none;
+}
+input#project-name.form-input::placeholder{
+  color:lightgrey;
+}
+textarea#project-desc.form-input::placeholder{
+  color:lightgrey;
+}
+.form-input{
+  font-family: 'Crimson Text', serif;
 }
 p {
   
@@ -741,6 +707,19 @@ button {
 .btn.btn-primary:hover {
   background-color: #ffa704;
 }
+.no-button:hover{
+    color: #fefefe;
+    text-decoration: underline;  
+}
+ #createBut:hover{
+    color: #fafaf9;
+    text-decoration: underline;
+ }
+ #profileTab:hover{
+  color: #fefefe;
+  text-decoration: underline;
+ }
+
 .btn.btn-danger {
   background-color: #e4980c;
   color: white;
@@ -933,7 +912,9 @@ form [type='radio'] {
 }
 /* col-sm */
 @media screen and (min-width: 640px) {
-  
+ h2{
+  margin: auto;
+ }
   .col-sm-auto {
     flex-grow: 1;
     flex-basis: 0;
