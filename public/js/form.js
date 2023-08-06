@@ -5,8 +5,6 @@ const submitForm = async (event) => {
     const surveyQuestions = document.querySelectorAll('.question');
     const userAnswers = document.querySelectorAll('.userAnswer');
 
-    console.log(surveyQuestions);
-    console.log(userAnswers);
     // Building Question and Answer arrays
     const questions = [];
     const answers = [];
@@ -14,15 +12,16 @@ const submitForm = async (event) => {
     // Populating the arrays with actual values from the question and answer input fields
     surveyQuestions.forEach((questionInput) => {
         const questionValue = questionInput.innerHTML;
-        questions.push(questionValue);
+        if (questionValue != ''){
+            questions.push(questionValue);
+        }
     });
     userAnswers.forEach((answerChoice) => {
         const answerValue = answerChoice.innerHTML;
-        answers.push(answerValue);
+        if (answerValue != ''){
+            answers.push(answerValue);
+        }
     });
-
-    console.log(surveyQuestions);
-    console.log(userAnswers);
 
     // Checks to see if all prompts have been answered, if not leave script
     if (answers.length != questions.length){
@@ -48,8 +47,6 @@ const submitForm = async (event) => {
     const url = window.location.toString().split("/");
     const surv_id = url[url.length - 1];
     
-    console.log(surv_id);
-
     const response = await fetch(`/api/responses/${surv_id}`, {
         method: 'POST',
         body: JSON.stringify(userResponse),

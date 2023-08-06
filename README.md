@@ -5,10 +5,6 @@
 ## Description
 This application allows users to login to their SMS account to view, fill out, create, and manage your own surveys. 
 
-## Acceptance Criteria
-``````
-
-``````
 ## Table of Contents
 
 * [Description](#description)
@@ -16,9 +12,19 @@ This application allows users to login to their SMS account to view, fill out, c
 * [Collaborators](#collaborators)
 * [Resources](#resources)
 
-## Mock-Up
-
 ## Deployed-URL
+
+<a href="https://warm-journey-42011-7d46ef37db5e.herokuapp.com/"> Link to application</a>
+
+## Screenshots
+
+<img src="/Survey-Management-Service/public/images/Image 8-6-23 at 12.59 AM.jpg" alt="Home Page"/>
+
+<img src="/Survey-Management-Service/public/images/Screenshot 2023-08-06 at 1.06.31 AM.png" alt="Survey"/>
+
+<img src="/Survey-Management-Service/public/images/Screenshot 2023-08-06 at 1.06.46 AM.png" alt="Creating a Survey"/>
+
+<img src="/Survey-Management-Service/public/images/Screenshot 2023-08-06 at 1.07.46 AM.png" alt="Profile with list of your surveys"/>
 
 ## Badges
 * ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
