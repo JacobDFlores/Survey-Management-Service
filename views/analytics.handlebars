@@ -5,12 +5,25 @@
       <!-- Options will be populated dynamically using JavaScript -->
     </select>
     <canvas id="barChart" width="400" height="400"></canvas>
+    <p id="loadingMessage">No survey data available.</p>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const responseData = JSON.parse('{{{responseDataJSON}}}');
+    const loadingMessage = document.getElementById('loadingMessage');
+    // Hides the dropdown and canvas (chart area) for this specific survey
+    if (!responseData || responseData.length === 0) {
+        loadingMessage.innerText = 'No data available for this survey.';
+        document.getElementById('questionDropdown').style.display = 'none';
+        document.getElementById('barChart').style.display = 'none';
+        return;
+    } else {
+        loadingMessage.style.display = 'none';
+        document.getElementById('questionDropdown').style.display = '';
+        document.getElementById('barChart').style.display = '';
+    }
 
     const answerDistribution = {};
 
@@ -28,7 +41,7 @@
 
     const questionDropdown = document.getElementById('questionDropdown');
 
-    // Populate the dropdown with the available questions
+    // Populates the dropdown with the available questions
     const allQuestions = Object.keys(answerDistribution);
     allQuestions.forEach((question) => {
       const option = document.createElement('option');
@@ -77,7 +90,7 @@
       window.myChart = new Chart(ctx, config);
     }
 
-    // Initially, display the chart for the first question
+   
     displayChartForQuestion(allQuestions[0]);
 
     // Event listener to the dropdown to update the chart when the selected question changes
