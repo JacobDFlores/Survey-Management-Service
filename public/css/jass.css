@@ -161,7 +161,7 @@ h3 {
   font-size: 2rem;
   transition: color .25s;
 }
-button.btn.btn-sm.btn.btn-danger{
+button.btn.btn-sm.btn.btn-danger.btn-success{
   margin: 30px;
 }
 button.btn.btn-primary{
@@ -1305,3 +1305,11 @@ form [type='radio'] {
     align-content: center;
   }
 }
+
+/* .alert {
+  padding: 10px;
+  border: 1px solid #d8000c;
+  background-color: #ffbaba;
+  color: #d8000c;
+  margin-bottom: 15px;
+} */

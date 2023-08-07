@@ -46,3 +46,5 @@ Survey Management Services (SMS) was created to allow our users to create custom
 * [Fonts](https://fonts.google.com/)
 
 * [NPM Chart.js](https://www.npmjs.com/package/chart.js?activeTab=readme)
+
+* [Ileriayo's Markdown-badges](https://ileriayo.github.io/markdown-badges/)

@@ -14,6 +14,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 console.log(path.join(__dirname, 'public', 'favicon.ico'));
+
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
 

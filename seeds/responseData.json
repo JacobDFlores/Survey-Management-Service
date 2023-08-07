@@ -1,0 +1,65 @@
+{
+    "user": 4,
+    "survey_id": 2,
+    "survey_data": {
+      "name": "Tech Survey",
+      "description": "N/A",
+      "questions": [
+        {
+          "question": "What is your preferred operating system?",
+          "answer1": "Windows",
+          "answer2": "macOS",
+          "answer3": "Linux",
+          "answer4": "Other"
+        },
+        {
+          "question": "Which device do you primarily use for internet browsing?",
+          "answer1": "Desktop computer",
+          "answer2": "Laptop",
+          "answer3": "Smartphone",
+          "answer4": "Tablet"
+        }
+      ]
+    },
+    "responses": [
+      {
+        "user_id": 1,
+        "answers": [
+          {
+            "question": "What is your preferred operating system?",
+            "userAnswer": "Windows"
+          },
+          {
+            "question": "Which device do you primarily use for internet browsing?",
+            "userAnswer": "Laptop"
+          }
+        ]
+      },
+      {
+        "user_id": 2,
+        "answers": [
+          {
+            "question": "What is your preferred operating system?",
+            "userAnswer": "macOS"
+          },
+          {
+            "question": "Which device do you primarily use for internet browsing?",
+            "userAnswer": "Smartphone"
+          }
+        ]
+      },
+      {
+        "user_id": 3,
+        "answers": [
+          {
+            "question": "What is your preferred operating system?",
+            "userAnswer": "Linux"
+          },
+          {
+            "question": "Which device do you primarily use for internet browsing?",
+            "userAnswer": "Tablet"
+          }
+        ]
+      }
+    ]
+  }
