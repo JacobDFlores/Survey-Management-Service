@@ -6,10 +6,10 @@
     <h2 >
       <a id="SurveyRendered" href="/survey/{{survey.id}}">{{survey.name}}</a>
     </h2>
-     <p id="homepagePara">Created by {{survey.user.name}} on {{format_date survey.date_created}}</p>
+     <p id="homepagePara" class="createdUser">Created by {{survey.user.name}} on {{format_date survey.date_created}}</p>
   </div>
   <div class="col-md-7">
-    <p id="home2para">
+    <p id="home2para" class="surveyDescription">
       {{survey.description}}
     </p>
   </div>
