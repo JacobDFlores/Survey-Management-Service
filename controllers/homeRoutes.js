@@ -48,11 +48,11 @@ router.get('/survey/:id', withAuth, async (req, res) => {
     });
 
     const survey = surveyData.get({ plain: true });
-    const user = userData.get({ plain: true });
+    // const user = userData.get({ plain: true });
 
     res.render('survey', {
       ...survey,
-      ...user, 
+      // ...user, 
       logged_in: req.session.logged_in
     });
 
