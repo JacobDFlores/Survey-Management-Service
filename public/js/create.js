@@ -107,6 +107,7 @@ document.querySelector('#add-question-btn').addEventListener('click', (event) =>
   questionInput.setAttribute('type', 'text');
   questionInput.setAttribute('class', 'question-input form-input mt-2');
   questionInput.setAttribute('placeholder', 'Enter Question Text');
+  questionInput.setAttribute('style', 'font-size:larger;')
 
   // Creates a new container for answer inputs related to this question
   const answerContainer = document.createElement('div');
@@ -118,8 +119,10 @@ document.querySelector('#add-question-btn').addEventListener('click', (event) =>
     answerInput.setAttribute('type', 'text');
     answerInput.setAttribute('class', 'answer-input form-input mt-1');
     answerInput.setAttribute('name', `question-${i}`); 
+    answerInput.setAttribute('style', 'font-size:large;'); 
     answerInput.setAttribute('placeholder', 'Enter Answer Choice');
     answerContainer.appendChild(answerInput);
+    answerContainer.setAttribute('style', 'margin-bottom:25px;')
   }
 
   // Adds the new input elements to the questions-container
