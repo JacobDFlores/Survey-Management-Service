@@ -5,86 +5,93 @@
       <!-- Options will be populated dynamically using JavaScript -->
     </select>
     <canvas id="barChart" width="400" height="400"></canvas>
+    <p id="loadingMessage">Loading survey data...</p>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const responseData = JSON.parse('{{{responseDataJSON}}}');
+        const responseData = JSON.parse('{{{responseDataJSON}}}');
+        const loadingMessage = document.getElementById('loadingMessage');
 
-    const answerDistribution = {};
+        if (responseData && responseData.length > 0) {
+            loadingMessage.style.display = 'none';
+            
+            const answerDistribution = {};
 
-    responseData.forEach(responseSet => {
-      responseSet.forEach(response => {
-        if (!answerDistribution[response.question]) {
-          answerDistribution[response.question] = {};
+            responseData.forEach(responseSet => {
+                responseSet.forEach(response => {
+                    if (!answerDistribution[response.question]) {
+                        answerDistribution[response.question] = {};
+                    }
+                    if (!answerDistribution[response.question][response.userAnswer]) {
+                        answerDistribution[response.question][response.userAnswer] = 0;
+                    }
+                    answerDistribution[response.question][response.userAnswer]++;
+                });
+            });
+
+            const questionDropdown = document.getElementById('questionDropdown');
+
+            // Populate the dropdown with the available questions
+            const allQuestions = Object.keys(answerDistribution);
+            allQuestions.forEach((question) => {
+                const option = document.createElement('option');
+                option.value = question;
+                option.innerText = question;
+                questionDropdown.appendChild(option);
+            });
+
+            // Function to display chart for selected question
+            function displayChartForQuestion(question) {
+                const labels = Object.keys(answerDistribution[question]);
+                const dataValues = Object.values(answerDistribution[question]);
+
+                const data = {
+                    labels: labels,
+                    datasets: [{
+                        label: question,
+                        data: dataValues,
+                        backgroundColor: [
+                            'rgba(255, 99, 132)',
+                            'rgba(54, 162, 235)',
+                            'rgba(255, 206, 86)',
+                            'rgba(75, 192, 192)',
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                        ],
+                        borderWidth: 2,
+                    }]
+                };
+
+                const config = {
+                    type: 'bar',
+                    data: data,
+                    options: {},
+                };
+
+                if (window.myChart) {
+                    window.myChart.destroy();
+                }
+
+                const ctx = document.getElementById('barChart').getContext('2d');
+                window.myChart = new Chart(ctx, config);
+            }
+
+            // Initially, display the chart for the first question
+            displayChartForQuestion(allQuestions[0]);
+
+            // Event listener to the dropdown to update the chart when the selected question changes
+            questionDropdown.addEventListener('change', (e) => {
+                const selectedQuestion = e.target.value;
+                displayChartForQuestion(selectedQuestion);
+            });
+        } else {
+            loadingMessage.innerText = 'No data available.';
         }
-        if (!answerDistribution[response.question][response.userAnswer]) {
-          answerDistribution[response.question][response.userAnswer] = 0;
-        }
-        answerDistribution[response.question][response.userAnswer]++;
-      });
     });
-
-    const questionDropdown = document.getElementById('questionDropdown');
-
-    // Populate the dropdown with the available questions
-    const allQuestions = Object.keys(answerDistribution);
-    allQuestions.forEach((question) => {
-      const option = document.createElement('option');
-      option.value = question;
-      option.innerText = question;
-      questionDropdown.appendChild(option);
-    });
-
-    // Function to display chart for selected question
-    function displayChartForQuestion(question) {
-      const labels = Object.keys(answerDistribution[question]);
-      const dataValues = Object.values(answerDistribution[question]);
-
-      const data = {
-        labels: labels,
-        datasets: [{
-          label: question,
-          data: dataValues,
-          backgroundColor: [
-            'rgba(255, 99, 132)',
-            'rgba(54, 162, 235)',
-            'rgba(255, 206, 86)',
-            'rgba(75, 192, 192)',
-          ],
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-          ],
-          borderWidth: 2,
-        }]
-      };
-
-      const config = {
-        type: 'bar',
-        data: data,
-        options: { },
-      };
-
-      if (window.myChart) {
-        window.myChart.destroy();
-      }
-
-      const ctx = document.getElementById('barChart').getContext('2d');
-      window.myChart = new Chart(ctx, config);
-    }
-
-    // Initially, display the chart for the first question
-    displayChartForQuestion(allQuestions[0]);
-
-    // Event listener to the dropdown to update the chart when the selected question changes
-    questionDropdown.addEventListener('change', (e) => {
-      const selectedQuestion = e.target.value;
-      displayChartForQuestion(selectedQuestion);
-    });
-
-  });
 </script>
